@@ -1,0 +1,16 @@
+
+{% for item in question %}
+    <div class="col">
+        <div class="card">
+          <img src="{{ item.image }}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">{{ item.headword }}</h5>
+            <p class="card-text">{{ item.definition }}</p>
+          </div>
+        </div>
+
+
+    <button onclick='pronounce("{{ item.sound }}")'"> audio </button>
+
+    </div>
+{% endfor %}

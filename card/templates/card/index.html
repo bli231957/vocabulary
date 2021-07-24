@@ -1,0 +1,14 @@
+{% if latest_question_list %}
+    <ul>
+    {% for question in latest_question_list %}
+        <li><a href="/card/{{ question.id }}/">{{ question.headword }}</a></li>
+        <!-- <li><a href="/card/{{ question.id }}/">{{ question.definition }}</a></li> -->
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No cards are available.</p>
+{% endif %}
+
+
+Here is all of the cards:
+<a href="/card/cards.html">All words</a>
